@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#fff">
+    <base target="_blank">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Media Recorder API Demo</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <style>
+        a#downloadLink {
+            display: block;
+            margin: 0 0 1em 0;
+            min-height: 1.2em;
+        }
+
+        p#data {
+            min-height: 6em;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div style="text-align:center;">
+        <h1>视频录制</h1>
+        <h2>视频录制目前支持Chrome浏览器</h2>
+
+        <h2>选择设备</h2>
+        <div class="select">
+            <label for="audioSource">Audio source: </label><select id="audioSource"></select>
+        </div>
+        <div class="select">
+            <label for="videoSource">Video source: </label><select id="videoSource"></select>
+        </div>
+
+        <video id="video" autoplay style="width: 640px;height: 480px"></video>
+        <br>
+        <button id="rec" onclick="onBtnRecordClicked()">录制</button>
+        <button id="pauseRes" onclick="onPauseResumeClicked()" disabled>暂停</button>
+        <button id="stop" onclick="onBtnStopClicked()" disabled>停止</button>
+    </div>
+    <a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href></a>
+    <p id="data"></p>
+    <h2>Works on:</h2>
+    <p>
+    <ul>
+        <li>Chrome 83+</li>
+    </ul>
+    </p>
+    <h2>
+        <h2>Links:</h2>
+        <p>
+        <ul>
+            <li>Article: <a target="_blank" href="https://addpipe.com/blog/mediarecorder-api/">https://addpipe.com/blog/mediarecorder-api/</a>
+            </li>
+            </li>
+            <li>W3C Draft: <a target="_blank" href="http://w3c.github.io/mediacapture-record/MediaRecorder.html">http://w3c.github.io/mediacapture-record/MediaRecorder.html</a>
+            </li>
+            <li>Media Recorder API at 65% penetration thanks to Chrome: <a target="_blank"
+                                                                           href="https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/">https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/</a>
+            </li>
+            <li>developer MediaStream Recording API:
+                <a>https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API</a></li>
+        </ul>
+        </p>
+    </h2>
+</div>
+<!--<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>-->
+<script src="./js/main.js" async></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+server:
+  port: 6080
+  servlet:
+    context-path: /video
+spring:
+  application:
+    name: matrix-video
+####MYSQL CONFIG###
+  datasource:
+    druid:
+      url: jdbc:mysql://47.xxx.79.116:3302/video
+      username: root
+      password: xxxx
+      initial-size: 2
+      min-idle: 2
+      max-active: 20
+
+management:
+  endpoints:
+    web:
+      base-path: /
+
+##业务参数
+matrix:
+  video:
+  dataPath: /tmp/videodata/
+
+  #文件上
+file:
+  system:
+    domain: http://172.17.105.26:6080
+  upload:
+    path: ${file.system.domain}/file-server/api/v1/upload/single
+  download:
+    path: ${file.system.domain}/file-server/api/v1/download/single
+  secret: test
+  appId: test
+
